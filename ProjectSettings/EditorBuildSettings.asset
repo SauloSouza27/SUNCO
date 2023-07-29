@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/SunCo/_Levels/Level1.unity
-    guid: 99c9720ab356a0642a771bea13969a05
+    path: Assets/SunCo/_Levels/MainMenu.unity
+    guid: 74ec1c61c063ede49b13dec4286731ae
+  - enabled: 1
+    path: Assets/_Developers/Saulo/Fase 1.unity
+    guid: d6835225a95be584cbf8950351dc2053
   m_configObjects: {}
