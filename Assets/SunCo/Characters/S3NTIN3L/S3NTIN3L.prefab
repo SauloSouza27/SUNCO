@@ -9,6 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 451149857752340011}
+  - component: {fileID: 7720981347138192119}
+  - component: {fileID: 7309173930923926521}
   m_Layer: 0
   m_Name: S3NTIN3L
   m_TagString: Untagged
@@ -34,6 +36,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7720981347138192119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7780425913548901386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 632d2c7e585dff141aea308a9b132818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atackRange: 0
+  atackDelay: 0
+  atackDamage: 0
+  robotModel: {fileID: 4423281258294937004}
+--- !u!136 &7309173930923926521
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7780425913548901386}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.4
+  m_Height: 1.1
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!1001 &3576930194715130109
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -391,6 +423,24 @@ MonoBehaviour:
   particleRoot:
   - {fileID: 3101282923620075859}
   - {fileID: 4063093222492158142}
+--- !u!114 &2919099151570731743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4423281258294937004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  outlineMode: 0
+  outlineColor: {r: 1, g: 1, b: 1, a: 1}
+  outlineWidth: 2
+  precomputeOutline: 0
+  bakeKeys: []
+  bakeValues: []
 --- !u!1001 &4704588367494506728
 PrefabInstance:
   m_ObjectHideFlags: 0

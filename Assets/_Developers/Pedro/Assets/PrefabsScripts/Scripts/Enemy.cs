@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z > -3)
+        if (transform.position.z < GameManager.instance.waterPosition.z)
         {
             transform.Translate(0, 0, 1 * speed * Time.deltaTime);
         }

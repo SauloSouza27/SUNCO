@@ -17,6 +17,8 @@ public class Robot : MonoBehaviour
     public int atackDamage;
     private bool isAtacking = false;
     Enemy atackTarget;
+    //Outline
+    [SerializeField] GameObject robotModel;
 
     public bool Movendo
     {
@@ -24,9 +26,9 @@ public class Robot : MonoBehaviour
     }
     private void Start()
     {
-        outline = GetComponent<Outline>();
+        outline = robotModel.GetComponent<Outline>();
         outline.OutlineColor = Color.white;
-        outline.enabled = false;
+        //outline.enabled = false;
     }
     private void Update()
     {
