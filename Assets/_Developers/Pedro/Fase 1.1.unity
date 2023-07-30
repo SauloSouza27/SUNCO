@@ -1561,6 +1561,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1667675483651653250, guid: a33d220c3ed77df4b8c2668668c66151,
+        type: 3}
+      propertyPath: m_TagString
+      value: Robot
+      objectReference: {fileID: 0}
     - target: {fileID: 1759482356765372274, guid: a33d220c3ed77df4b8c2668668c66151,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1933,6 +1938,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7780425913548901386, guid: 71f5ddffa4867f444881cb7da93c6428,
+        type: 3}
+      propertyPath: m_TagString
+      value: Robot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71f5ddffa4867f444881cb7da93c6428, type: 3}
 --- !u!1001 &3458839447988443285
@@ -2130,7 +2140,7 @@ PrefabInstance:
     - target: {fileID: 3654788495547438813, guid: 4443ad0dfd38211458353bc57996054d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.13
       objectReference: {fileID: 0}
     - target: {fileID: 3654788495547438813, guid: 4443ad0dfd38211458353bc57996054d,
         type: 3}
@@ -2500,6 +2510,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 221523951016185956, guid: 04d715319e280e447af19fadc9f2d400,
+        type: 3}
+      propertyPath: atackDelay
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5065169491750361913, guid: 04d715319e280e447af19fadc9f2d400,
         type: 3}
       propertyPath: m_LocalRotation.x
@@ -2528,7 +2543,7 @@ PrefabInstance:
     - target: {fileID: 6113614681531998462, guid: 04d715319e280e447af19fadc9f2d400,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.13
       objectReference: {fileID: 0}
     - target: {fileID: 6113614681531998462, guid: 04d715319e280e447af19fadc9f2d400,
         type: 3}
@@ -2746,6 +2761,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3413068517254896011, guid: 1e385d13f69ffd74baf113bf72fbbea3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Robot
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e385d13f69ffd74baf113bf72fbbea3, type: 3}
 --- !u!108 &7228171708589184442
@@ -2925,7 +2945,7 @@ PrefabInstance:
     - target: {fileID: 8124218186015141339, guid: 02d3b937c5146004eb9455bc3ee300ae,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -3.13
       objectReference: {fileID: 0}
     - target: {fileID: 8124218186015141339, guid: 02d3b937c5146004eb9455bc3ee300ae,
         type: 3}
