@@ -1,3 +1,4 @@
+using SunCo.Scripts.Vfx;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.IO.LowLevel.Unsafe;
@@ -8,7 +9,7 @@ public class Robot : MonoBehaviour
 {
     private bool outlined = false, moving = false;
     private Hexagon currentHexagon;
-    Vector3 hexagonVector, lookAtCorrection= new Vector3(0,1,0);
+    Vector3 hexagonVector, lookAtCorrection= new Vector3(0,0,0);
     private float speed = 0.01f, factor;
     Outline outline;
     //Ataque
@@ -18,7 +19,9 @@ public class Robot : MonoBehaviour
     private bool isAtacking = false;
     Enemy atackTarget;
     //Outline
-    [SerializeField] GameObject robotModel;
+    [SerializeField] GameObject robotFBX;
+    //VFX Weapon
+    private AnimationPlayVfx vFX;
 
     public bool Movendo
     {
@@ -26,7 +29,8 @@ public class Robot : MonoBehaviour
     }
     private void Start()
     {
-        outline = robotModel.GetComponent<Outline>();
+        vFX = robotFBX.GetComponent<AnimationPlayVfx>();
+        outline = robotFBX.GetComponent<Outline>();
         outline.OutlineColor = Color.white;
         //outline.enabled = false;
     }
@@ -72,6 +76,7 @@ public class Robot : MonoBehaviour
         while (atackTarget.lifePoints > 0 && !moving)
         {
             transform.LookAt(atackTarget.transform.position + lookAtCorrection);
+            vFX.PlayParticles();
             Action();
             yield return new WaitForSeconds(atackDelay);
         }
@@ -122,13 +127,17 @@ public class Robot : MonoBehaviour
 
     public void StartOutline()
     {
+        /*
         outlined = true;
-        outline.enabled = true;        
+        outline.enabled = true;    
+        */
     }
     public void StopOutline()
     {
+        /*
         outlined = false;
         outline.enabled = false;
+        */
     }
     public bool IsOutlined()
     {
