@@ -1,6 +1,4 @@
-using UnityEngine;
-
-namespace __MoyaGames.Scripts.Utils
+namespace SunCo.Scripts.Utils
 {
     public class PersistentSingleton<T> : Singleton<T> where T : Singleton<T>
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace __MoyaGames.Scripts.Utils
+namespace SunCo.Scripts.Utils
 {
     public abstract class Singleton<T> : MonoBehaviour where T : Singleton<T>
     {

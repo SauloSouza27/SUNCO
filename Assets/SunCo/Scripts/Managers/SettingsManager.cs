@@ -1,4 +1,4 @@
-﻿using __MoyaGames.Scripts.Utils;
+﻿using SunCo.Scripts.Utils;
 using UnityEngine;
 using UnityEngine.Audio;
 
