@@ -20,8 +20,9 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: WaterMaterial
-  m_Shader: {fileID: -6465566751694194690, guid: 6b0164bc18aeb8648b2adc604979cddd, type: 3}
+  m_Name: WaterMaterialDefault
+  m_Shader: {fileID: -6465566751694194690, guid: 6b0164bc18aeb8648b2adc604979cddd,
+    type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -55,13 +56,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Choppiness: 0.15
+    - _Choppiness: 0
     - _Flow_Speed: 0.04
-    - _Flow_Strength: 0.0075
-    - _Foarm_Distance: 2.13
+    - _Flow_Strength: 0.0005
+    - _Foarm_Distance: 0.01
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Size: 2
+    - _Size: 3
     m_Colors:
     - _Dark_Foam_Color: {r: 0, g: 0.19999996, b: 0.5215686, a: 0}
     - _Light_Foam_Color: {r: 1, g: 1, b: 1, a: 0}
