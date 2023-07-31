@@ -3366,7 +3366,7 @@ PrefabInstance:
     - target: {fileID: 1667675483651653250, guid: a33d220c3ed77df4b8c2668668c66151,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1667675483651653250, guid: a33d220c3ed77df4b8c2668668c66151,
         type: 3}
@@ -4014,16 +4014,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Orchid
       objectReference: {fileID: 0}
-    - target: {fileID: 3654788495547438814, guid: 4443ad0dfd38211458353bc57996054d,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6664968043031031964, guid: 4443ad0dfd38211458353bc57996054d,
-        type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4443ad0dfd38211458353bc57996054d, type: 3}
 --- !u!1 &4054892383895605563
@@ -4425,7 +4415,7 @@ PrefabInstance:
     - target: {fileID: 6113614681531998463, guid: 04d715319e280e447af19fadc9f2d400,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04d715319e280e447af19fadc9f2d400, type: 3}
@@ -4787,7 +4777,7 @@ PrefabInstance:
     - target: {fileID: 8124218186015141336, guid: 02d3b937c5146004eb9455bc3ee300ae,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8124218186015141339, guid: 02d3b937c5146004eb9455bc3ee300ae,
         type: 3}
