@@ -22,6 +22,8 @@ public class Robot : MonoBehaviour
     [SerializeField] GameObject robotFBX;
     //VFX Weapon
     private AnimationPlayVfx vFX;
+    //Animator
+    private Animator animator;
 
     public bool Movendo
     {
@@ -29,7 +31,7 @@ public class Robot : MonoBehaviour
     }
     private void Start()
     {
-        vFX = robotFBX.GetComponent<AnimationPlayVfx>();
+        animator = robotFBX.GetComponent<Animator>();
         outline = robotFBX.GetComponent<Outline>();
         outline.OutlineColor = Color.white;
         outline.enabled = false;
@@ -84,7 +86,7 @@ public class Robot : MonoBehaviour
                 break;
             }
             transform.LookAt(atackTarget.transform.position);
-            vFX.PlayParticles();
+            animator.SetTrigger("Shoot");
             Action();
             yield return new WaitForSeconds(atackDelay);
         }
