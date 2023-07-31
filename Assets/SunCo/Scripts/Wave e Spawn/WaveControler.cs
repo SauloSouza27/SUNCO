@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class WaveControler : Singleton<WaveControler>
 {
-    [SerializeField] private GameObject[] waves;
     [SerializeField] private int amountKillsPerWave = 10;
+    [SerializeField] private GameObject[] waves;
     private int killsWave;
     private int waveOrder = 0;
 
