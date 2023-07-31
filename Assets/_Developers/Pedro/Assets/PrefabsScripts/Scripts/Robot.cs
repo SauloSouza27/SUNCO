@@ -44,10 +44,10 @@ public class Robot : MonoBehaviour
         {
             CheckForEnemies();
         }
-       /* if (isAtacking)
+        if (isAtacking && atackTarget != null )
         {
-            transform.LookAt(atackTarget.transform.position + lookAtCorrection);
-        }*/
+            transform.LookAt(atackTarget.transform.position);
+        }
     }
     private void CheckForEnemies()
     {
@@ -99,11 +99,11 @@ public class Robot : MonoBehaviour
         //Remover check de null quando implementar StartGame
         if(currentHexagon != null)
         {
-        currentHexagon.Ocupado = false;
+        currentHexagon.Ocuppied = false;
         }
         hexagonVector = target.transform.position;
         currentHexagon = target;
-        currentHexagon.Ocupado = true;
+        currentHexagon.Ocuppied = true;
         moving = true;
     }
     private void UpdatePosition()
@@ -134,18 +134,14 @@ public class Robot : MonoBehaviour
     }
 
     public void StartOutline()
-    {
-        
+    {       
         outlined = true;
-        outline.enabled = true;    
-        
+        outline.enabled = true;           
     }
     public void StopOutline()
-    {
-        
+    {       
         outlined = false;
-        outline.enabled = false;
-        
+        outline.enabled = false;       
     }
     public bool IsOutlined()
     {

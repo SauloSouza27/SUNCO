@@ -4,15 +4,8 @@ using UnityEngine;
 
 public class TEste : Robot
 {
-    // Start is called before the first frame update
-    void Start()
+    public override void Action()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("12");
     }
 }

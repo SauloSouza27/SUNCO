@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shader Graphs_HoloShield
+  m_Name: Shader Graphs_HoloShield_Block
   m_Shader: {fileID: -6465566751694194690, guid: a1473031dd88c2147808e2f9dfcbadc7,
     type: 3}
   m_ValidKeywords: []
@@ -39,13 +39,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _AngleRotation: 0
+    - _AngleRotation: 5
     - _EmissionStrenght: 2.02
     - _HoloVelocity: -0.62
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0.3137255, g: 2.1490197, b: 3.2, a: 0}
+    - _Color: {r: 4.272251, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &692637971737470385
 MonoBehaviour:

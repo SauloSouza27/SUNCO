@@ -17,6 +17,9 @@ public class MouseController : MonoBehaviour
     private void Start()
     {
         mainCamera = Camera.main;
+        robots[0].Move(hexagons[14]);
+        robots[1].Move(hexagons[20]);
+        robots[2].Move(hexagons[21]);
     }
 
     private void Update()

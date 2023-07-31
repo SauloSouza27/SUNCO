@@ -4,35 +4,42 @@ using UnityEngine;
 
 public class Hexagon : MonoBehaviour
 {
-    private bool brilhando = false, ocupado = false;
-    Outline outline;
-    public bool Ocupado
+    private bool Highlighted = false, ocuppied = false;
+    [SerializeField] GameObject selectionShield, ocuppiedSpace;
+    public bool Ocuppied
     {
-        get { return ocupado; }
-        set { ocupado = value; }
-    }
-    private void Start()
-    {
-       // outline = GetComponent<Outline>();
-      //  outline.OutlineColor = Color.white;
+        get { return ocuppied; }
+        set { ocuppied = value; }
     }
     public void StartOutline()
     {
-        if (!ocupado)
+        if (!ocuppied)
         {
-            brilhando = true;
-          //  outline.OutlineColor = Color.red;
-        }       
+            Highlighted = true;
+            selectionShield.SetActive(true);
+        }
+        else
+        {
+            ocuppiedSpace.SetActive(true);
+        }
     }
 
     public void StopOutline()
     {
-        brilhando = false;
-       // outline.OutlineColor = Color.white;
+        Highlighted = false;
+        if (ocuppiedSpace != null )
+        {
+            ocuppiedSpace.SetActive(false);
+        }
+        if (selectionShield != null)
+        {
+            selectionShield.SetActive(false);
+        }
+
     }
 
     public bool IsOutlined()
     {        
-        return brilhando;
+        return Highlighted;
     }
 }

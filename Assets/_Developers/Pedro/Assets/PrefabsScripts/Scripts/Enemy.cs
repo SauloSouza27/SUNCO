@@ -38,8 +38,8 @@ public class Enemy : MonoBehaviour
     }
     public void Die()
     {
-        Destroy(gameObject);
         WaveControler.instance.ChangeWave();
+        Destroy(gameObject);
     }
 
     public void Init(Spawn Owner, float speedMultiplier)
