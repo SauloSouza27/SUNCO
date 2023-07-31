@@ -5,6 +5,7 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float lifePoints, speed, enemyDamage, atackDelay, atackTimer;
+    private Spawn _owner;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,5 +39,12 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         Destroy(gameObject);
+        WaveControler.instance.ChangeWave();
+    }
+
+    public void Init(Spawn Owner, float speedMultiplier)
+    {
+        _owner = Owner;
+        speed *= speedMultiplier;
     }
 }
