@@ -9,7 +9,7 @@ public class Robot : MonoBehaviour
 {
     private bool outlined = false, moving = false;
     private Hexagon currentHexagon;
-    Vector3 hexagonVector, lookAtCorrection= new Vector3(0,0,0);
+    Vector3 hexagonVector;
     private float speed = 0.01f, factor;
     Outline outline;
     //Ataque
@@ -32,7 +32,7 @@ public class Robot : MonoBehaviour
         vFX = robotFBX.GetComponent<AnimationPlayVfx>();
         outline = robotFBX.GetComponent<Outline>();
         outline.OutlineColor = Color.white;
-        //outline.enabled = false;
+        outline.enabled = false;
     }
     private void Update()
     {
@@ -44,6 +44,10 @@ public class Robot : MonoBehaviour
         {
             CheckForEnemies();
         }
+       /* if (isAtacking)
+        {
+            transform.LookAt(atackTarget.transform.position + lookAtCorrection);
+        }*/
     }
     private void CheckForEnemies()
     {
@@ -73,9 +77,13 @@ public class Robot : MonoBehaviour
     {
         isAtacking = true;
 
-        while (atackTarget.lifePoints > 0 && !moving)
+        while (atackTarget != null && atackTarget.lifePoints > 0 && !moving)
         {
-            transform.LookAt(atackTarget.transform.position + lookAtCorrection);
+            if(Vector3.Distance(atackTarget.transform.position,transform.position) > atackRange + 0.5f)
+            {
+                break;
+            }
+            transform.LookAt(atackTarget.transform.position);
             vFX.PlayParticles();
             Action();
             yield return new WaitForSeconds(atackDelay);
@@ -93,7 +101,7 @@ public class Robot : MonoBehaviour
         {
         currentHexagon.Ocupado = false;
         }
-        hexagonVector = target.transform.position + lookAtCorrection;
+        hexagonVector = target.transform.position;
         currentHexagon = target;
         currentHexagon.Ocupado = true;
         moving = true;
@@ -127,17 +135,17 @@ public class Robot : MonoBehaviour
 
     public void StartOutline()
     {
-        /*
+        
         outlined = true;
         outline.enabled = true;    
-        */
+        
     }
     public void StopOutline()
     {
-        /*
+        
         outlined = false;
         outline.enabled = false;
-        */
+        
     }
     public bool IsOutlined()
     {
