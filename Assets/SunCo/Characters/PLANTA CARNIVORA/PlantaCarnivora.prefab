@@ -46,10 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a14efb3893bc14bbf81efabfe83259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifePoints: 10
+  lifePoints: 5
   speed: 1
   enemyDamage: 1
-  atackDelay: 0
+  atackDelay: 1
   atackTimer: 0
 --- !u!65 &1741549295190748873
 BoxCollider:
@@ -150,6 +150,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: plantaCarnivora
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101462651893668999, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.07467005
+      objectReference: {fileID: 0}
+    - target: {fileID: 7101462651893668999, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.12733063
       objectReference: {fileID: 0}
     - target: {fileID: 8226937220950142699, guid: f5f85d71bfc48be429e87360cf93cb6f,
         type: 3}

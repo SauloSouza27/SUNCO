@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7309173930923926521}
   m_Layer: 0
   m_Name: S3NTIN3L
-  m_TagString: Untagged
+  m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,10 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632d2c7e585dff141aea308a9b132818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atackRange: 0
-  atackDelay: 0
-  atackDamage: 0
-  robotModel: {fileID: 4423281258294937004}
+  atackRange: 2
+  atackDelay: 3
+  atackDamage: 2
+  robotFBX: {fileID: 4423281258294937004}
 --- !u!136 &7309173930923926521
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7780425913548901386}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.4
   m_Height: 1.1
@@ -523,6 +523,61 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ShapeModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.9893317
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.b
+      value: 0.2593717
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.g
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.r
+      value: 0.0039215665
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f0ac7f35575a3443832c24b5cc1d341, type: 3}
 --- !u!4 &3101282923620075857 stripped
@@ -618,6 +673,61 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ShapeModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.9893317
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.b
+      value: 0.2593717
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.g
+      value: 0.9529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 7657234627679871419, guid: 6f0ac7f35575a3443832c24b5cc1d341,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key2.r
+      value: 0.0039215665
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f0ac7f35575a3443832c24b5cc1d341, type: 3}

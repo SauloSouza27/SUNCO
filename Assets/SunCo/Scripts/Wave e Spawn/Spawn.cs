@@ -17,7 +17,7 @@ public class Spawn : MonoBehaviour
     // Cooldowns
     [SerializeField] private float delaySpawn;
     [SerializeField] private float cooldown = 1f;
-    [SerializeField] private int amount = 1;
+    public int amount = 1;
     private float timeCounter;
     // Status Enemy
     [SerializeField]private float speedMultiplier = 1f;
@@ -27,8 +27,8 @@ public class Spawn : MonoBehaviour
         switch (spawnPosition)
         {
             case SpawnPosition.Center:
-                minX = -6f;
-                maxX = 6;
+                minX = -4f;
+                maxX = 4;
                 minZ = -5.6f;
                 maxZ = -5.7f;
                 break;
@@ -48,7 +48,10 @@ public class Spawn : MonoBehaviour
 
         FindNewPosition();
     }
-
+    private void OnEnable()
+    {
+        WaveControler.instance.amountKillsPerWave += amount;
+    }
     private void Update()
     {
         if (delaySpawn > 0)

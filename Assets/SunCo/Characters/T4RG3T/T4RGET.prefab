@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 334258033155456460}
   m_Layer: 0
   m_Name: T4RGET
-  m_TagString: Untagged
+  m_TagString: Robot
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -47,10 +47,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632d2c7e585dff141aea308a9b132818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atackRange: 0
-  atackDelay: 0
-  atackDamage: 0
-  robotModel: {fileID: 3028166693738046953}
+  atackRange: 2
+  atackDelay: 3
+  atackDamage: 5
+  robotFBX: {fileID: 3028166693738046953}
 --- !u!136 &334258033155456460
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -59,7 +59,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3413068517254896011}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.4
   m_Height: 1.1
@@ -146,6 +146,51 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Sniper
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120966768546001070, guid: 629673086cff36640bfa26d017a8b531,
+        type: 3}
+      propertyPath: ColorModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120966768546001070, guid: 629673086cff36640bfa26d017a8b531,
+        type: 3}
+      propertyPath: ShapeModule.enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120966768546001070, guid: 629673086cff36640bfa26d017a8b531,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120966768546001070, guid: 629673086cff36640bfa26d017a8b531,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.81960785
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120966768546001070, guid: 629673086cff36640bfa26d017a8b531,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0.53561246
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120966768546001070, guid: 629673086cff36640bfa26d017a8b531,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 0.05882351
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120966768546001070, guid: 629673086cff36640bfa26d017a8b531,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120966768546001070, guid: 629673086cff36640bfa26d017a8b531,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.g
+      value: 0.05369997
+      objectReference: {fileID: 0}
+    - target: {fileID: 9120966768546001070, guid: 629673086cff36640bfa26d017a8b531,
+        type: 3}
+      propertyPath: ColorModule.gradient.maxGradient.key1.r
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 629673086cff36640bfa26d017a8b531, type: 3}
