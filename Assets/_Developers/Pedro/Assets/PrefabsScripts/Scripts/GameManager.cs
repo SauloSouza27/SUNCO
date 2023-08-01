@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI textWater;
     // Start is called before the first frame update
 
+
+    [SerializeField] private GameObject hudCanvas;
+    [SerializeField] private GameObject EndGameCanvas;
+    [SerializeField] private GameObject WinGameCanvas;
+
     private void Start()
     {
         textWater.text = waterLife.ToString();
@@ -19,19 +24,30 @@ public class GameManager : MonoBehaviour
     {
         if(instance == null)
         {
-        instance = this;
+            instance = this;
         }
         else
         {
             Destroy(gameObject);
         }
     }
+
+    public void WinGame()
+    {
+        hudCanvas.SetActive(false);
+        EndGameCanvas.SetActive(false);
+        WinGameCanvas.SetActive(true);
+        Time.timeScale = 0;
+    }
     public void DamageWater(float damage)
     {
         waterLife -= damage;
         if(waterLife <= 0)
         {
-            //GameOver();
+            hudCanvas.SetActive(false);
+            WinGameCanvas.SetActive(false);
+            EndGameCanvas.SetActive(true);
+            Time.timeScale = 0;
         }
         else
         {

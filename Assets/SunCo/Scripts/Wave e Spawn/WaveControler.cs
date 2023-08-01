@@ -27,8 +27,16 @@ public class WaveControler : Singleton<WaveControler>
             amountKillsPerWave = 0;
             killsWave = 0;
             waves[waveOrder].SetActive(false);
-            waves[++waveOrder].SetActive(true);
-            textWave.text = (waveOrder + 1).ToString();
+            waveOrder++;
+            if (waves.Length > waveOrder)
+            {
+                waves[waveOrder].SetActive(true);
+                textWave.text = (waveOrder + 1).ToString();
+            }
+            else
+            {
+                GameManager.instance.WinGame();
+            }
         }
     }
 }

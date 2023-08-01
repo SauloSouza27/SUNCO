@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632d2c7e585dff141aea308a9b132818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atackRange: 4
-  atackDelay: 3
+  atackRange: 3
+  atackDelay: 5
   atackDamage: 10
   robotFBX: {fileID: 3028166693738046953}
 --- !u!136 &334258033155456460
