@@ -54,6 +54,7 @@ MonoBehaviour:
   atackDelay: 1
   atackTimer: 0
   deathSound: {fileID: 5741069569776329598}
+  enemyModel: {fileID: 5168189524958177299}
 --- !u!65 &-9120312348411372744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -387,3 +388,9 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!1 &5168189524958177299 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4960055580152732067, guid: 6ea0c58b39f034b40b0d45967d034641,
+    type: 3}
+  m_PrefabInstance: {fileID: 246766387512766896}
+  m_PrefabAsset: {fileID: 0}

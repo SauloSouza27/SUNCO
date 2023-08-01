@@ -48,12 +48,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a14efb3893bc14bbf81efabfe83259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifePoints: 10
-  speed: 1
+  lifePoints: 15
+  speed: 0.6
   enemyDamage: 1
   atackDelay: 1
   atackTimer: 0
   deathSound: {fileID: 5158608463940800676}
+  enemyModel: {fileID: 6074622743571286696}
 --- !u!65 &6007430346905601840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -437,3 +438,9 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!1 &6074622743571286696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4611812450506672563, guid: de61caeed4ed512498c13b9b066639da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1462851627835704091}
+  m_PrefabAsset: {fileID: 0}

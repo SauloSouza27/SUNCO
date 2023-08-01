@@ -49,11 +49,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lifePoints: 5
-  speed: 1
+  speed: 0.8
   enemyDamage: 1
   atackDelay: 1
   atackTimer: 0
   deathSound: {fileID: -926320544571876355}
+  enemyModel: {fileID: 2468013835311877624}
 --- !u!65 &1741549295190748873
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -365,6 +366,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 9e36bbc10665e8743b75ab1bd6f88f15, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f85d71bfc48be429e87360cf93cb6f, type: 3}
+--- !u!1 &2468013835311877624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 470146744860920390, guid: f5f85d71bfc48be429e87360cf93cb6f,
+    type: 3}
+  m_PrefabInstance: {fileID: 2649926896275310526}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2543644308641357909 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f5f85d71bfc48be429e87360cf93cb6f,
