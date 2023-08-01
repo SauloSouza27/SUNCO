@@ -4096,6 +4096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterPosition: {x: 0, y: 0, z: 1.7}
   waterLife: 10
+  textWater: {fileID: 762781640}
 --- !u!4 &1735044114
 Transform:
   m_ObjectHideFlags: 0
