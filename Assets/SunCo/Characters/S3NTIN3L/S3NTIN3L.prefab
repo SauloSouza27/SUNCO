@@ -521,7 +521,7 @@ MonoBehaviour:
   - {fileID: 3101282923620075859}
   - {fileID: 4063093222492158142}
   robot: {fileID: 7720981347138192119}
-  audioSource: {fileID: 0}
+  shootSound: {fileID: 1239946136533747086}
 --- !u!114 &2919099151570731743
 MonoBehaviour:
   m_ObjectHideFlags: 0

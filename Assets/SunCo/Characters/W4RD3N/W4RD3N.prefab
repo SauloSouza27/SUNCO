@@ -783,7 +783,7 @@ MonoBehaviour:
   - {fileID: 509145970760165320}
   - {fileID: 4272825327941551764}
   robot: {fileID: 1413344616979484864}
-  audioSource: {fileID: 8531192098873113392}
+  shootSound: {fileID: 8531192098873113392}
 --- !u!4 &7982299967456954249 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3c067bb4887eecb4898f9fff54bdb10c,

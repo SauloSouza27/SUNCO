@@ -768,7 +768,7 @@ MonoBehaviour:
   particleRoot:
   - {fileID: 7281538760422859108}
   robot: {fileID: 7875916749749696055}
-  audioSource: {fileID: 0}
+  shootSound: {fileID: 1313036735832462092}
 --- !u!1001 &6986533060321663558
 PrefabInstance:
   m_ObjectHideFlags: 0
