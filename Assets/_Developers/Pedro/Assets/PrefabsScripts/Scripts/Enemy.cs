@@ -6,6 +6,7 @@ public class Enemy : MonoBehaviour
 {
     public float lifePoints, speed, enemyDamage, atackDelay, atackTimer;
     private Spawn _owner;
+    [SerializeField] private AudioSource deathSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -39,6 +40,7 @@ public class Enemy : MonoBehaviour
     public void Die()
     {
         WaveControler.instance.ChangeWave();
+        deathSound.Play();
         Destroy(gameObject);
     }
 

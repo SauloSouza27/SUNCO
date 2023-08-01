@@ -6,8 +6,12 @@ namespace SunCo.Scripts.Vfx
     {
         [SerializeField] private ParticleSystem[] particleRoot;
         [SerializeField] private Robot robot;
+        [SerializeField] private AudioSource shootSound;
+
         public void PlayParticles()
         {
+            shootSound.Play();
+
             foreach (var particle in particleRoot)
             {
                 particle.Play(true);
