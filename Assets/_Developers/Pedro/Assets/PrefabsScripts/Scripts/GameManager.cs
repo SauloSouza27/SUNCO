@@ -22,5 +22,13 @@ public class GameManager : MonoBehaviour
     public void DamageWater(float damage)
     {
         waterLife -= damage;
+        if(waterLife <= 0)
+        {
+            //GameOver();
+        }
+        else
+        {
+            //Coloca aqui a função de mostrar a vida
+        }
     }
 }
