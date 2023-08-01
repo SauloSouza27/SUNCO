@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atackRange: 2
-  atackDelay: 3
+  atackDelay: 1
   atackDamage: 2
   robotFBX: {fileID: 4423281258294937004}
 --- !u!136 &7309173930923926521
