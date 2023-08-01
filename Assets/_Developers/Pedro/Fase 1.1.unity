@@ -929,7 +929,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: XI
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3780,7 +3780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1599291969
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3943,6 +3943,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6206450915853527377, guid: 024b5594a4c96f144b8370feaed3006c,
+        type: 3}
+      propertyPath: textWave
+      value: 
+      objectReference: {fileID: 483462396}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 024b5594a4c96f144b8370feaed3006c, type: 3}
 --- !u!1001 &1658350495
@@ -4091,6 +4096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterPosition: {x: 0, y: 0, z: 1.7}
   waterLife: 10
+  textWater: {fileID: 762781640}
 --- !u!4 &1735044114
 Transform:
   m_ObjectHideFlags: 0

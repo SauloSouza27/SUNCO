@@ -2,6 +2,7 @@ using SunCo.Scripts.Utils;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class WaveControler : Singleton<WaveControler>
 {
@@ -9,7 +10,7 @@ public class WaveControler : Singleton<WaveControler>
     [SerializeField] private GameObject[] waves;
     private int killsWave;
     private int waveOrder = 0;
-
+    [SerializeField] private TextMeshProUGUI textWave;
     private void Start()
     {
         waves[waveOrder].SetActive(true);
@@ -27,6 +28,7 @@ public class WaveControler : Singleton<WaveControler>
             killsWave = 0;
             waves[waveOrder].SetActive(false);
             waves[++waveOrder].SetActive(true);
+            textWave.text = (waveOrder + 1).ToString();
         }
     }
 }
