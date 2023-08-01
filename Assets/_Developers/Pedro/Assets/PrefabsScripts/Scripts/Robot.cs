@@ -69,10 +69,13 @@ public class Robot : MonoBehaviour
     }
     public virtual void Action()
     {
-        atackTarget.TakeDamage(atackDamage);
-        if (atackTarget.lifePoints <= 0)
+        if (atackTarget != null)
         {
-            atackTarget.Die();
+            atackTarget.TakeDamage(atackDamage);
+            if (atackTarget.lifePoints <= 0)
+            {
+                atackTarget.Die();
+            }
         }
     }
     private IEnumerator AtackEnemyTarget()
@@ -87,7 +90,7 @@ public class Robot : MonoBehaviour
             }
             transform.LookAt(atackTarget.transform.position);
             animator.SetTrigger("Shoot");
-            Action();
+            //Action();
             yield return new WaitForSeconds(atackDelay);
         }
 
