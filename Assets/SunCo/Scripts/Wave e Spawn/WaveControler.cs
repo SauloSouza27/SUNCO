@@ -14,7 +14,6 @@ public class WaveControler : Singleton<WaveControler>
     private void Start()
     {
         waves[waveOrder].SetActive(true);
-        textWave.text = " "+ waveOrder + 1;
     }
 
     public void ChangeWave()
@@ -29,6 +28,7 @@ public class WaveControler : Singleton<WaveControler>
             killsWave = 0;
             waves[waveOrder].SetActive(false);
             waves[++waveOrder].SetActive(true);
+            textWave.text = (waveOrder + 1).ToString();
         }
     }
 }
