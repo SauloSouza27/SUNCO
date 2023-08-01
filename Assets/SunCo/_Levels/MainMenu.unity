@@ -185,7 +185,9 @@ MonoBehaviour:
     & Programmer\n\nMaria Fernanda Silva Pinto - fefe10sp@gmail.com\n    - 3D Artist\n\nMateus
     Malta de Menezes - malteus.ta@gmail.com\n    - 3D Artist & Animator\n\nSaulo
     Ant\xF4nio Souza - sauloas96@gmail.com\n     - 3D Artist\n\nVitor Soares Silva
-    - vitrola.vitor@gmail.com\n    - VFX Artist & Programmer\n\n\n"
+    - vitrola.vitor@gmail.com\n    - VFX Artist & Programmer\n\nRodrigo de Souza
+    Abreu Siqueira - rodsiq2@gmail.com\n    - Composer\n\nLuan Assis - luanassissilva@gmail.com\n   
+    - Composer & SFX"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -212,8 +214,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 33.53
+  m_fontSizeBase: 33.53
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2017,7 +2019,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1200, y: 800}
+  m_SizeDelta: {x: 1200, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &878804687
 MonoBehaviour:
@@ -2667,10 +2669,10 @@ RectTransform:
   m_Father: {fileID: 878804686}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1000, y: 400}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -49.49504}
+  m_SizeDelta: {x: 1000, y: -98.989914}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1151907171
 MonoBehaviour:
