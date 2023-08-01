@@ -47,8 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81a14efb3893bc14bbf81efabfe83259, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifePoints: 10
-  speed: 1
+  lifePoints: 15
+  speed: 0.6
   enemyDamage: 1
   atackDelay: 1
   atackTimer: 0
