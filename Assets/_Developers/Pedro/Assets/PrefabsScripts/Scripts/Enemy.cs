@@ -1,15 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class Enemy : MonoBehaviour
 {
     public float lifePoints, speed, enemyDamage, atackDelay, atackTimer;
     private Spawn _owner;
+    [SerializeField] private GameObject enemyModel;
+    private Material material;
     // Start is called before the first frame update
     void Start()
     {
         transform.LookAt(GameManager.instance.waterPosition);
+        material = enemyModel.GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
@@ -32,9 +36,16 @@ public class Enemy : MonoBehaviour
             }
         }
     }
+    IEnumerator RespondToDamage()
+    {
+        material.color = Color.red;
+        yield return new WaitForSeconds(0.3f);
+        material.color = Color.white;
+    }
     public void TakeDamage(float damage)
     {
         lifePoints -= damage;
+        StartCoroutine(RespondToDamage());
     }
     public void Die()
     {

@@ -51,6 +51,7 @@ MonoBehaviour:
   enemyDamage: 1
   atackDelay: 1
   atackTimer: 0
+  enemyModel: {fileID: 6074622743571286696}
 --- !u!65 &6007430346905601840
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -240,3 +241,9 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!1 &6074622743571286696 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4611812450506672563, guid: de61caeed4ed512498c13b9b066639da,
+    type: 3}
+  m_PrefabInstance: {fileID: 1462851627835704091}
+  m_PrefabAsset: {fileID: 0}
