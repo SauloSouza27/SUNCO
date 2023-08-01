@@ -40,7 +40,7 @@ Material:
     m_Ints: []
     m_Floats:
     - _AngleRotation: 0
-    - _EmissionStrenght: 2.02
+    - _EmissionStrenght: 1
     - _HoloVelocity: -0.62
     - _QueueControl: 0
     - _QueueOffset: 0
