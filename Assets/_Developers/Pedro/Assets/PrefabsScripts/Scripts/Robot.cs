@@ -20,8 +20,8 @@ public class Robot : MonoBehaviour
     Enemy atackTarget;
     //Outline
     [SerializeField] GameObject robotFBX;
-    //VFX Weapon
-    private AnimationPlayVfx vFX;
+    //Weapon
+    [SerializeField] Weapon Gun;
     //Animator
     private Animator animator;
 
@@ -90,7 +90,6 @@ public class Robot : MonoBehaviour
             }
             transform.LookAt(atackTarget.transform.position);
             animator.SetTrigger("Shoot");
-            //Action();
             yield return new WaitForSeconds(atackDelay);
         }
 
