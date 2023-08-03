@@ -1,18 +1,49 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ShopController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject buttonWarden, buttonSentinel, buttonTarget;
+    [SerializeField] GameObject targetWarden;
+    [SerializeField] int[] robotPrices = new int[3] {50,50,50};
+
+    public void Start()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    public void ShowUnityShop()
     {
-        
+        if (!buttonWarden.activeSelf)
+        {
+            Debug.Log("Ativo");
+            buttonWarden.SetActive(true);
+            buttonSentinel.SetActive(true);
+            buttonTarget.SetActive(true);
+        }
+        else
+        {
+            Debug.Log("Desativado");
+            buttonWarden.SetActive(false);
+            buttonSentinel.SetActive(false);
+            buttonTarget.SetActive(false);
+        }
+    }
+
+    public void BuyRobot(int robot)
+    {
+        switch (robot)
+        {
+            case 0:
+                if(GameManager.instance.money > robotPrices[0])
+                {
+
+                }
+                break;
+            case 1:
+
+                break;
+            case 2:
+
+                break;
+        }
     }
 }

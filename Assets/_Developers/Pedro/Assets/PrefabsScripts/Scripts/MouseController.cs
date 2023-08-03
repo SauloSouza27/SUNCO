@@ -17,9 +17,6 @@ public class MouseController : MonoBehaviour
     private void Start()
     {
         mainCamera = Camera.main;
-        robots[0].Move(hexagons[14]);
-        robots[1].Move(hexagons[20]);
-        robots[2].Move(hexagons[21]);
     }
 
     private void Update()
@@ -30,20 +27,26 @@ public class MouseController : MonoBehaviour
             OutlineRobotInCursor();
             timeNextHover = Time.time + delayNextHover;
         }
-        ClickHexagon();
-        ClickRobot();
     }
     private void UpdateRayCastOnClick()
     {
-        if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(0))
         {
             ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(ray, out hit);
+            if (hit.collider.CompareTag("Robot"))
+            {
+                ClickRobot();
+            }
+            else
+            {
+                ClickHexagon();
+            }
         }
     }
     private void ClickRobot()
     {
-        
+
         if (Input.GetMouseButtonDown(0))
         {
             robot = WhichRobot(hit.collider.name);
@@ -73,31 +76,28 @@ public class MouseController : MonoBehaviour
     }
     private void ClickHexagon()
     {
-        if (Input.GetMouseButtonDown(1))
+        //Verifica Se algum robo ira mover
+        if (robotSelected != null && !robotSelected.Movendo)
         {
-            //Verifica Se algum robo ira mover
-            if (robotSelected != null && !robotSelected.Movendo)
+            if (hit.collider.CompareTag("Hexagon"))
             {
-                if (hit.collider.CompareTag("Hexagon"))
+                hexagon = hexagons[ExtractIndexHexagon(hit.collider.name)];
+            }
+            else
+            {
+                hexagon = null;
+            }
+            // Verifique se o objeto atingido pelo raio é um hexágono brilhante
+            if (hexagon != null && hexagon.IsOutlined())
+            {
+                // Mova o robô para o centro do hexágono selecionado
+                robotSelected.Move(hexagon);
+                // Desselecione o robô e pare o brilho nos hexágonos
+                robotSelected.UndoSelectRobot();
+                robotSelected = null;
+                foreach (Hexagon hexagono in hexagons)
                 {
-                    hexagon = hexagons[ExtractIndexHexagon(hit.collider.name)];
-                }
-                else
-                {
-                    hexagon = null;
-                }
-                // Verifique se o objeto atingido pelo raio é um hexágono brilhante
-                if (hexagon != null && hexagon.IsOutlined())
-                {
-                    // Mova o robô para o centro do hexágono selecionado
-                    robotSelected.Move(hexagon);
-                    // Desselecione o robô e pare o brilho nos hexágonos
-                    robotSelected.UndoSelectRobot();
-                    robotSelected = null;
-                    foreach (Hexagon hexagono in hexagons)
-                    {
-                        hexagono.StopOutline();
-                    }
+                    hexagono.StopOutline();
                 }
             }
         }
@@ -106,7 +106,7 @@ public class MouseController : MonoBehaviour
     {
         ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         Physics.Raycast(ray, out hit);
-      
+
         if (robotSelected == null && hit.collider != null)
         {
             robot = WhichRobot(hit.collider.name);

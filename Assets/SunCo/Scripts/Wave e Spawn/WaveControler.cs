@@ -10,7 +10,7 @@ public class WaveControler : Singleton<WaveControler>
     [SerializeField] private GameObject[] waves;
     private int killsWave;
     private int waveOrder = 0;
-    [SerializeField] private TextMeshProUGUI textWave;
+    
     private void Start()
     {
         waves[waveOrder].SetActive(true);
@@ -31,7 +31,7 @@ public class WaveControler : Singleton<WaveControler>
             if (waves.Length > waveOrder)
             {
                 waves[waveOrder].SetActive(true);
-                textWave.text = (waveOrder + 1).ToString();
+                GameManager.instance.uiController.ChangeWave(waveOrder + 1);
             }
             else
             {

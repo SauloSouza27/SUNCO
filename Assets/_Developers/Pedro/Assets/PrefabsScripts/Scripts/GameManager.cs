@@ -6,20 +6,18 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    public int money = 150;
     public Vector3 waterPosition= new Vector3(0.5f,0,-3.77f);
     public float waterLife = 10;
-    [SerializeField] private TextMeshProUGUI textWater;
-    // Start is called before the first frame update
+    // References
+    public ShopController shopController;
+    public UiController uiController;
 
 
     [SerializeField] private GameObject hudCanvas;
     [SerializeField] private GameObject EndGameCanvas;
     [SerializeField] private GameObject WinGameCanvas;
 
-    private void Start()
-    {
-        textWater.text = waterLife.ToString();
-    }
     void Awake()
     {
         if(instance == null)
@@ -31,7 +29,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
     public void WinGame()
     {
         hudCanvas.SetActive(false);
@@ -51,7 +48,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            textWater.text = waterLife.ToString();
+            uiController.ChangeWater(waterLife);
         }
     }
 }
