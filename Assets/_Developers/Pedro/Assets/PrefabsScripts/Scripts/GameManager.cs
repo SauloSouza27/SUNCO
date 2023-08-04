@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     // References
     public ShopController shopController;
     public UiController uiController;
+    public MouseController mouseController;
 
 
     [SerializeField] private GameObject hudCanvas;
@@ -36,6 +37,11 @@ public class GameManager : MonoBehaviour
         WinGameCanvas.SetActive(true);
         Time.timeScale = 0;
     }
+    public void RefreshUi()
+    {
+        uiController.ChangeMoney(money);
+        uiController.ChangeWater(waterLife);
+    }
     public void DamageWater(float damage)
     {
         waterLife -= damage;
@@ -50,5 +56,10 @@ public class GameManager : MonoBehaviour
         {
             uiController.ChangeWater(waterLife);
         }
+    }
+    public void SpendMoney(int cost)
+    {
+        money -= cost;
+        uiController.ChangeMoney(money);
     }
 }

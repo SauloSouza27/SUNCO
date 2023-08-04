@@ -1,3 +1,4 @@
+using Microsoft.Win32.SafeHandles;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -6,19 +7,47 @@ using UnityEngine;
 
 public class MouseController : MonoBehaviour
 {
-    [SerializeField] Robot[] robots;
-    [SerializeField] Hexagon[] hexagons;
-    Hexagon hexagon;
+    //Robots
+    [SerializeField] GameObject robotSpace;
+    [SerializeField] Robot[] robotsToBuy = new Robot[3];
+    [SerializeField]private Robot[] robots = new Robot[3];
+    public int robotCount;
     private Robot robotHovered, robotSelected, robot;
+    //Hexagons
+    [SerializeField] Hexagon[] hexagons;
+    private Hexagon hexagon;
+
     private Camera mainCamera;
     private float timeNextHover, delayNextHover = 0.034f;
-    Ray ray;
-    RaycastHit hit;
+    private Ray ray;
+    private RaycastHit hit;
     private void Start()
     {
         mainCamera = Camera.main;
+        GameManager.instance.mouseController = this;
     }
 
+    public void AddRobot(int robotType)
+    {
+        switch (robotCount)
+        {
+            case 0:
+                robots[robotCount] = Instantiate(robotsToBuy[robotType], robotSpace.transform);
+                robots[robotCount].name = "R1";
+                robotCount++;
+                break;
+            case 1:
+                robots[robotCount] = Instantiate(robotsToBuy[robotType], robotSpace.transform);
+                robots[robotCount].name = "R2";
+                robotCount++;
+                break;
+            case 2:
+                robots[robotCount] = Instantiate(robotsToBuy[robotType], transform);
+                robots[robotCount].name = "R3";
+                robotCount++;
+                break;
+        }
+    }
     private void Update()
     {
         UpdateRayCastOnClick();
@@ -34,14 +63,8 @@ public class MouseController : MonoBehaviour
         {
             ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             Physics.Raycast(ray, out hit);
-            if (hit.collider.CompareTag("Robot"))
-            {
-                ClickRobot();
-            }
-            else
-            {
-                ClickHexagon();
-            }
+            ClickHexagon();
+            ClickRobot();
         }
     }
     private void ClickRobot()
@@ -70,7 +93,7 @@ public class MouseController : MonoBehaviour
                 {
                     hexagono.StartOutline();
                 }
-            }
+            }          
         }
         // Execute o clique apenas se houver um robô selecionado
     }

@@ -5,10 +5,11 @@ using UnityEngine;
 
 public class UiController : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI textWave,textMoney,textWater, textPriceWarden, textPriceTarget, TextPriceSentinel;
+    [SerializeField] TextMeshProUGUI textWave,textMoney,textWater, textPriceWarden, textPriceTarget, TextPriceSentinel;
     void Start()
     {
         GameManager.instance.uiController = this;
+        GameManager.instance.RefreshUi();
     }
 
     // Update is called once per frame

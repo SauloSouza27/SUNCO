@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 221523951016185956}
   - component: {fileID: 1741549295190748873}
   - component: {fileID: -926320544571876355}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: PlantaCarnivora
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -171,6 +171,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6113614681531998462}
     m_Modifications:
+    - target: {fileID: -9108871185540463801, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f5f85d71bfc48be429e87360cf93cb6f,
         type: 3}
       propertyPath: m_RootOrder
@@ -246,10 +251,175 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -7535272482272016011, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7447429659680377644, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7214277761089459040, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6524144041013532702, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6325975075820003224, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -6270591030387341474, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5875747590894348812, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -5456266574955188996, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4648986881941415795, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4149477685343159761, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -4108202771278176483, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2317396920071671934, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -2122929837277090641, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1637036227771921642, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1538601892653263973, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 470146744860920390, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 888177656605290852, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f5f85d71bfc48be429e87360cf93cb6f,
         type: 3}
       propertyPath: m_Name
       value: plantaCarnivora
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1060216630788470036, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1514173992875354829, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1906231989605969395, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2027665630515499485, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2595306223422319200, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3477901113937857893, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3667868008696907866, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3831432027910511805, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4427249108686421994, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5462651595520783314, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5534938399482625121, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5814394663663653760, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6742329166458773793, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6826487872324936764, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7036213049465896255, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7101462651893668999, guid: f5f85d71bfc48be429e87360cf93cb6f,
         type: 3}
@@ -261,11 +431,21 @@ PrefabInstance:
       propertyPath: m_LocalRotation.z
       value: 0.12733063
       objectReference: {fileID: 0}
+    - target: {fileID: 7200790656706094018, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8226937220950142699, guid: f5f85d71bfc48be429e87360cf93cb6f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9e36bbc10665e8743b75ab1bd6f88f15, type: 2}
+    - target: {fileID: 8772488897933315504, guid: f5f85d71bfc48be429e87360cf93cb6f,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5f85d71bfc48be429e87360cf93cb6f, type: 3}
 --- !u!1 &2468013835311877624 stripped

@@ -502,18 +502,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6e912bb0089d7e4f9e9cd979178c317, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &160227675 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7720981347138192119, guid: 71f5ddffa4867f444881cb7da93c6428,
-    type: 3}
-  m_PrefabInstance: {fileID: 3422770367165136812}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 632d2c7e585dff141aea308a9b132818, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &196942476
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -672,7 +660,7 @@ GameObject:
   - component: {fileID: 207157773}
   - component: {fileID: 207157772}
   m_Layer: 5
-  m_Name: WaterLevel
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -832,18 +820,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 226578701}
   m_CullTransparentMesh: 1
---- !u!114 &237634258 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7875916749749696055, guid: 1e385d13f69ffd74baf113bf72fbbea3,
-    type: 3}
-  m_PrefabInstance: {fileID: 7200057341924746347}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 632d2c7e585dff141aea308a9b132818, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &264617688
 GameObject:
   m_ObjectHideFlags: 0
@@ -2833,7 +2809,7 @@ GameObject:
   - component: {fileID: 762781641}
   - component: {fileID: 762781640}
   m_Layer: 5
-  m_Name: WaterText
+  m_Name: WaterLevelText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3651,7 +3627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &857722144
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5622,7 +5598,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1310753288
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7587,10 +7563,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b91adbaec837474d91aafbd9a3ab617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  robotSpace: {fileID: 780561907}
+  robotsToBuy:
+  - {fileID: 1413344616979484864, guid: a33d220c3ed77df4b8c2668668c66151, type: 3}
+  - {fileID: 7875916749749696055, guid: 1e385d13f69ffd74baf113bf72fbbea3, type: 3}
+  - {fileID: 7720981347138192119, guid: 71f5ddffa4867f444881cb7da93c6428, type: 3}
   robots:
-  - {fileID: 1951918769}
-  - {fileID: 237634258}
-  - {fileID: 160227675}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  robotCount: 0
   hexagons:
   - {fileID: 2070976359}
   - {fileID: 211202738}
@@ -7637,6 +7619,7 @@ MonoBehaviour:
   waterLife: 10
   shopController: {fileID: 0}
   uiController: {fileID: 0}
+  mouseController: {fileID: 0}
   hudCanvas: {fileID: 711521107}
   EndGameCanvas: {fileID: 1390180827}
   WinGameCanvas: {fileID: 1457863818}
@@ -7698,7 +7681,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1754416177}
   - component: {fileID: 1754416179}
-  - component: {fileID: 1754416178}
   m_Layer: 0
   m_Name: UiManager
   m_TagString: Untagged
@@ -7721,24 +7703,6 @@ Transform:
   m_Father: {fileID: 701061991}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1754416178
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1754416176}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0dd9814443bfd542bb12dc460df6b1f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  textWave: {fileID: 0}
-  textMoney: {fileID: 0}
-  textWater: {fileID: 0}
-  textPriceWarden: {fileID: 0}
-  textPriceTarget: {fileID: 0}
-  TextPriceSentinel: {fileID: 0}
 --- !u!114 &1754416179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7753,10 +7717,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textWave: {fileID: 483462396}
   textMoney: {fileID: 1274093850}
-  textWater: {fileID: 1239216181}
-  textPriceWarden: {fileID: 0}
-  textPriceTarget: {fileID: 0}
-  TextPriceSentinel: {fileID: 0}
+  textWater: {fileID: 762781640}
+  textPriceWarden: {fileID: 1922794644}
+  textPriceTarget: {fileID: 1956031078}
+  TextPriceSentinel: {fileID: 264617690}
 --- !u!1001 &1780697454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7843,7 +7807,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1811845791
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8124,7 +8088,6 @@ MonoBehaviour:
   buttonWarden: {fileID: 1811845790}
   buttonSentinel: {fileID: 1310753287}
   buttonTarget: {fileID: 857722143}
-  targetWarden: {fileID: 0}
   robotPrices: 320000003200000032000000
 --- !u!4 &1853372662 stripped
 Transform:
@@ -8687,18 +8650,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1949435720}
   m_CullTransparentMesh: 1
---- !u!114 &1951918769 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1413344616979484864, guid: a33d220c3ed77df4b8c2668668c66151,
-    type: 3}
-  m_PrefabInstance: {fileID: 1667675483146605243}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 632d2c7e585dff141aea308a9b132818, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1951918771 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1667675483651653249, guid: a33d220c3ed77df4b8c2668668c66151,
@@ -10012,7 +9963,7 @@ PrefabInstance:
     - target: {fileID: 1667675483651653250, guid: a33d220c3ed77df4b8c2668668c66151,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a33d220c3ed77df4b8c2668668c66151, type: 3}
@@ -10144,7 +10095,7 @@ PrefabInstance:
     - target: {fileID: 7780425913548901386, guid: 71f5ddffa4867f444881cb7da93c6428,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71f5ddffa4867f444881cb7da93c6428, type: 3}
@@ -10794,7 +10745,7 @@ PrefabInstance:
     - target: {fileID: 3413068517254896011, guid: 1e385d13f69ffd74baf113bf72fbbea3,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1e385d13f69ffd74baf113bf72fbbea3, type: 3}

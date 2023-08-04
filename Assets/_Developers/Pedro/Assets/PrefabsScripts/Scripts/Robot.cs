@@ -100,7 +100,6 @@ public class Robot : MonoBehaviour
     {
         Debug.Log("estou indo");
         factor = 0;
-        //Remover check de null quando implementar StartGame
         if(currentHexagon != null)
         {
         currentHexagon.Ocuppied = false;
