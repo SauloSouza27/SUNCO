@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace SunCo.Scripts.Vfx
@@ -5,13 +6,19 @@ namespace SunCo.Scripts.Vfx
     public class AnimationPlayVfx : MonoBehaviour
     {
         [SerializeField] private ParticleSystem[] particleRoot;
-        [SerializeField] private Robot robot;
         [SerializeField] private AudioSource shootSound;
+        [SerializeField] private Robot robot;
 
         public void PlayParticles()
         {
             shootSound.Play();
-
+            foreach (var particle in particleRoot)
+            {
+                particle.Play(true);
+            }
+        }
+        public void PlayProjectiles()
+        {
             foreach (var particle in particleRoot)
             {
                 particle.Play(true);
@@ -23,6 +30,6 @@ namespace SunCo.Scripts.Vfx
             {
                 robot.Action();
             }
-        }
+        }  
     }
 }

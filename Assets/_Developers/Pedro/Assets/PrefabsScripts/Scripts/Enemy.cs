@@ -47,6 +47,10 @@ public class Enemy : MonoBehaviour
     {
         lifePoints -= damage;
         StartCoroutine(RespondToDamage());
+        if (lifePoints <= 0)
+        {
+            Die();
+        }
     }
     public void Die()
     {

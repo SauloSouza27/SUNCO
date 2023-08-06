@@ -12,16 +12,25 @@ public class Robot : MonoBehaviour
     Vector3 hexagonVector;
     private float speed = 0.01f, factor;
     Outline outline;
-    //Ataque
+
+    //Atack
     public float atackRange;
     public float atackDelay;
     public int atackDamage;
     private bool isAtacking = false;
     Enemy atackTarget;
+    public Enemy AtackTarget
+    {
+        get { return atackTarget; }
+    }
+
     //Outline
     [SerializeField] GameObject robotFBX;
+
     //Weapon
-    [SerializeField] Weapon Gun;
+    [SerializeField] bool singleTarget;
+    [SerializeField] Weapon weapon;
+
     //Animator
     private Animator animator;
 
@@ -69,14 +78,19 @@ public class Robot : MonoBehaviour
     }
     public virtual void Action()
     {
-        if (atackTarget != null)
+        weapon.SpawnBullet();
+        /*
+        if (atackTarget != null && singleTarget)
         {
             atackTarget.TakeDamage(atackDamage);
+            
             if (atackTarget.lifePoints <= 0)
             {
                 atackTarget.Die();
             }
+            
         }
+        */
     }
     private IEnumerator AtackEnemyTarget()
     {
@@ -118,7 +132,6 @@ public class Robot : MonoBehaviour
             moving = false;
             transform.position = hexagonVector;
         }
-        
     }
 
     public void SelectRobot()

@@ -1,16 +1,37 @@
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class Weapon : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private ObjectPool<Bullet> _pool;
+    [SerializeField] Bullet _bullet;
+    [SerializeField] int maxProjectiles;
+    [SerializeField] Robot robot;
+
+
     void Start()
     {
-        
+        _pool = new ObjectPool<Bullet>(() =>
+        {
+            return Instantiate(_bullet, transform);
+        }, Bullet =>{
+            Bullet.gameObject.SetActive(true);
+            Bullet.transform.position = transform.position;
+            Bullet.transform.LookAt(robot.AtackTarget.transform);
+        }, Bullet =>{
+            Debug.Log("despawn");
+            Bullet.gameObject.SetActive(false);
+        }, Bullet =>{
+            Destroy(gameObject);
+        }, false, maxProjectiles, maxProjectiles*2);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnBullet()
     {
-        
+        _pool.Get();
+    }
+    public void DespawnBullet(Bullet bulletCalling)
+    {
+        _pool.Release(bulletCalling);
     }
 }
