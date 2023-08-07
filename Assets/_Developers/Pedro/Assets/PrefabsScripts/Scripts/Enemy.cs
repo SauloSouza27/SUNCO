@@ -9,11 +9,14 @@ public class Enemy : MonoBehaviour
     private Spawn _owner;
     [SerializeField] private AudioSource deathSound;
     [SerializeField] private GameObject enemyModel;
+    [SerializeField] private GameObject enemyFBX;
     private Material material;
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         transform.LookAt(GameManager.instance.waterPosition);
+        animator = enemyFBX.GetComponent<Animator>();
         material = enemyModel.GetComponent<Renderer>().material;
     }
 
@@ -26,6 +29,7 @@ public class Enemy : MonoBehaviour
         }
         else
         {
+            animator.SetBool("Action", true);
             if (atackTimer < atackDelay)
             {
                 atackTimer += Time.deltaTime;

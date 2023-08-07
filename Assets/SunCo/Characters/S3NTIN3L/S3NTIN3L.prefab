@@ -49,9 +49,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   atackRange: 2
-  atackDelay: 1
-  atackDamage: 2
+  atackDelay: 4
+  atackDamage: 10
   robotFBX: {fileID: 4423281258294937004}
+  weapon: {fileID: 0}
 --- !u!136 &7309173930923926521
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -520,8 +521,8 @@ MonoBehaviour:
   particleRoot:
   - {fileID: 3101282923620075859}
   - {fileID: 4063093222492158142}
-  robot: {fileID: 7720981347138192119}
   shootSound: {fileID: 1239946136533747086}
+  robot: {fileID: 7720981347138192119}
 --- !u!114 &2919099151570731743
 MonoBehaviour:
   m_ObjectHideFlags: 0

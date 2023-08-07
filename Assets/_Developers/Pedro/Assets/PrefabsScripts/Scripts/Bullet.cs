@@ -23,7 +23,7 @@ public class Bullet : MonoBehaviour
         {
             Move();
         }
-        if (areaDamage)
+        if (isActiveAndEnabled)
         {
             if (_decayTimer >= decayTime)
             {
@@ -37,6 +37,7 @@ public class Bullet : MonoBehaviour
     }
     private void Die()
     {
+        _decayTimer = 0;
         weapon.DespawnBullet(this);
     }
     private void Move()
@@ -45,7 +46,6 @@ public class Bullet : MonoBehaviour
     }
     private void OnTriggerEnter(Collider col)
     {
-        Debug.Log("jse");
         if (col.gameObject.CompareTag("Enemy"))
         {
             if (areaDamage)
@@ -55,7 +55,7 @@ public class Bullet : MonoBehaviour
                     col.gameObject.GetComponent<Enemy>().TakeDamage(robot.atackDamage);
                 }
             }
-            else if(col != null && col.gameObject.GetComponent<Enemy>() == robot.AtackTarget)
+            else if (col != null && col.gameObject.GetComponent<Enemy>() == robot.AtackTarget)
             {
                 robot.AtackTarget.TakeDamage(robot.atackDamage);
                 Die();

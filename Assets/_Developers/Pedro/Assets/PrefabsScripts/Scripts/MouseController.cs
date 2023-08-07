@@ -8,9 +8,9 @@ using UnityEngine;
 public class MouseController : MonoBehaviour
 {
     //Robots
-    [SerializeField] GameObject robotSpace;
-    [SerializeField] Robot[] robotsToBuy = new Robot[3];
-    [SerializeField]private Robot[] robots = new Robot[3];
+    [SerializeField] private GameObject robotsSpaceInHierarchy;
+    [SerializeField] private Robot[] robotsToBuy = new Robot[3];
+    private Robot[] robots = new Robot[3];
     public int robotCount;
     private Robot robotHovered, robotSelected, robot;
     //Hexagons
@@ -32,12 +32,12 @@ public class MouseController : MonoBehaviour
         switch (robotCount)
         {
             case 0:
-                robots[robotCount] = Instantiate(robotsToBuy[robotType], robotSpace.transform);
+                robots[robotCount] = Instantiate(robotsToBuy[robotType], robotsSpaceInHierarchy.transform);
                 robots[robotCount].name = "R1";
                 robotCount++;
                 break;
             case 1:
-                robots[robotCount] = Instantiate(robotsToBuy[robotType], robotSpace.transform);
+                robots[robotCount] = Instantiate(robotsToBuy[robotType], robotsSpaceInHierarchy.transform);
                 robots[robotCount].name = "R2";
                 robotCount++;
                 break;

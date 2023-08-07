@@ -5,17 +5,11 @@ using UnityEngine;
 
 public class UiController : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI textWave,textMoney,textWater, textPriceWarden, textPriceTarget, TextPriceSentinel;
+    [SerializeField] TextMeshProUGUI textCapacity,textWave,textMoney,textWater, textPriceWarden, textPriceTarget, TextPriceSentinel;
     void Start()
     {
         GameManager.instance.uiController = this;
         GameManager.instance.RefreshUi();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
     public void ChangePrices(int warden,int target,int sentinel)
     {
@@ -23,9 +17,14 @@ public class UiController : MonoBehaviour
         textPriceTarget.text = target.ToString();
         TextPriceSentinel.text = sentinel.ToString();
     }
+    public void ChangeCapacity()
+    {
+        textCapacity.text = $"{GameManager.instance.mouseController.robotCount + 1} / {GameManager.instance.MaximumRobots}";
+    }
     public void ChangeMoney(int money)
     {
         textMoney.text = "$ " + money;
+        ChangeCapacity();
     }
     public void ChangeWater(float water)
     {

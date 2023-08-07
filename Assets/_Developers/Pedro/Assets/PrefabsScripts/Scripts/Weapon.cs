@@ -14,16 +14,22 @@ public class Weapon : MonoBehaviour
         _pool = new ObjectPool<Bullet>(() =>
         {
             return Instantiate(_bullet, transform);
-        }, Bullet =>{
-            Bullet.gameObject.SetActive(true);
-            Bullet.transform.position = transform.position;
-            Bullet.transform.LookAt(robot.AtackTarget.transform);
-        }, Bullet =>{
+        }, Bullet =>
+        {
+            if (robot.AtackTarget != null)
+            {
+                Bullet.gameObject.SetActive(true);
+                Bullet.transform.position = transform.position;
+                Bullet.transform.LookAt(robot.AtackTarget.transform);
+            }
+        }, Bullet =>
+        {
             Debug.Log("despawn");
             Bullet.gameObject.SetActive(false);
-        }, Bullet =>{
+        }, Bullet =>
+        {
             Destroy(gameObject);
-        }, false, maxProjectiles, maxProjectiles*2);
+        }, false, maxProjectiles, maxProjectiles * 2);
     }
 
     public void SpawnBullet()

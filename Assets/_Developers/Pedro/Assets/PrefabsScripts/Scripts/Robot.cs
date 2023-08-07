@@ -28,7 +28,6 @@ public class Robot : MonoBehaviour
     [SerializeField] GameObject robotFBX;
 
     //Weapon
-    [SerializeField] bool singleTarget;
     [SerializeField] Weapon weapon;
 
     //Animator
@@ -80,7 +79,7 @@ public class Robot : MonoBehaviour
     {
         weapon.SpawnBullet();
         /*
-        if (atackTarget != null && singleTarget)
+        if (atackTarget != null)
         {
             atackTarget.TakeDamage(atackDamage);
             

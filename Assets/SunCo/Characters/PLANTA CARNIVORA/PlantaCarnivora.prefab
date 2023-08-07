@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 221523951016185956}
   - component: {fileID: 1741549295190748873}
   - component: {fileID: -926320544571876355}
-  - component: {fileID: -4245336052717982245}
+  - component: {fileID: -2264257134041531473}
   m_Layer: 0
   m_Name: PlantaCarnivora
   m_TagString: Enemy
@@ -51,10 +51,11 @@ MonoBehaviour:
   lifePoints: 5
   speed: 0.8
   enemyDamage: 1
-  atackDelay: 1
+  atackDelay: 1.5
   atackTimer: 0
   deathSound: {fileID: -926320544571876355}
   enemyModel: {fileID: 2468013835311877624}
+  enemyFBX: {fileID: 2884282508805110511}
 --- !u!65 &1741549295190748873
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -165,7 +166,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!54 &-4245336052717982245
+--- !u!54 &-2264257134041531473
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

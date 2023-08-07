@@ -48,12 +48,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 632d2c7e585dff141aea308a9b132818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  oi: 0
   atackRange: 3
   atackDelay: 4
-  atackDamage: 5
+  atackDamage: 10
   robotFBX: {fileID: 3028166693738046953}
-  Gun: 0
+  weapon: {fileID: 0}
 --- !u!136 &334258033155456460
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -816,11 +815,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particleRoot:
   - {fileID: 7281538760422859108}
-  robot: {fileID: 7875916749749696055}
   shootSound: {fileID: 1313036735832462092}
-  bullet: {fileID: 1649206401195356674, guid: 7eb2b486c02187e48ad51559253e68c7, type: 3}
-  bulletSpawnPoint: {fileID: 8198604160859280481}
-  bulletSpeed: 15
+  robot: {fileID: 7875916749749696055}
 --- !u!1001 &6986533060321663558
 PrefabInstance:
   m_ObjectHideFlags: 0
