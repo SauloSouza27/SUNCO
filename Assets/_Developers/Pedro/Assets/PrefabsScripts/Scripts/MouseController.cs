@@ -42,7 +42,7 @@ public class MouseController : MonoBehaviour
                 robotCount++;
                 break;
             case 2:
-                robots[robotCount] = Instantiate(robotsToBuy[robotType], transform);
+                robots[robotCount] = Instantiate(robotsToBuy[robotType], robotsSpaceInHierarchy.transform);
                 robots[robotCount].name = "R3";
                 robotCount++;
                 break;

@@ -20,7 +20,6 @@ public class Weapon : MonoBehaviour
             {
                 Bullet.gameObject.SetActive(true);
                 Bullet.transform.position = transform.position;
-                Bullet.transform.LookAt(robot.AtackTarget.transform);
             }
         }, Bullet =>
         {

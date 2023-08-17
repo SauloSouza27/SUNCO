@@ -7692,9 +7692,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waterPosition: {x: 0, y: 0, z: 1.2}
   waterLife: 10
-  shopController: {fileID: 0}
-  uiController: {fileID: 0}
-  mouseController: {fileID: 0}
+  shopController: {fileID: 1836686924}
+  uiController: {fileID: 1754416179}
+  mouseController: {fileID: 1969920176}
   MaximumRobots: 3
   hudCanvas: {fileID: 711521107}
   EndGameCanvas: {fileID: 1390180827}
